@@ -8,7 +8,7 @@ export const ThoughtList = ({ loading, thoughtList, handleHeartButtonChange }) =
   if (loading) {
     return (
       <p>THE PAGE IS LOADING</p>
-    );
+    )
   }
 
   return (
@@ -26,10 +26,9 @@ export const ThoughtList = ({ loading, thoughtList, handleHeartButtonChange }) =
               <p>{formatDistance(new Date(thought.createdAt), Date.now(), { addSuffix: true })}</p>
             </div>
           </div>
-        );
-      })};
+        )
+      })}
     </section>
 
   );
-};
-// const createdAt = thoughtList;
+}

@@ -59,6 +59,8 @@
   margin: 25px 0;
   border: 2px solid rgb(127, 127, 127);
   box-shadow: 7px 7px rgb(58, 58, 58);
+  overflow: auto;
+  overflow-wrap: break-word;
 }
 
 .bottomOnThought {
