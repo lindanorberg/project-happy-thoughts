@@ -31,7 +31,7 @@ export const App = () => {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        message: newThought
+        text: newThought
       })
     }
 
