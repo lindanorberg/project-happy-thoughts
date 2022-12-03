@@ -17,7 +17,7 @@ export const ThoughtList = ({ loading, thoughtList, handleHeartButtonChange }) =
         return (
           // eslint-disable-next-line no-underscore-dangle
           <div key={thought._id} className="toughtMessage">
-            <p>{thought.message}</p>
+            <p>{thought.text}</p>
             <div className="bottomOnThought">
               <div className="heartCount">
                 <button type="button" onClick={() => handleHeartButtonChange(thought._id)} className={thought.hearts === 0 ? 'noHeartBtn' : 'heartBtn'}>💗</button>
