@@ -11,7 +11,7 @@ export const App = () => {
 
   const fetchThought = () => {
     setLoading(true);
-    fetch('https://happy-thoughts-technigo.herokuapp.com/thoughts')
+    fetch('https://project-happy-thoughts-api-t2v5z5lalq-lz.a.run.app/thoughts')
       .then((result) => result.json())
       .then((data) => setToughtList(data))
       .catch((error) => console.error(error))
@@ -35,7 +35,7 @@ export const App = () => {
       })
     }
 
-    fetch('https://happy-thoughts-technigo.herokuapp.com/thoughts', options)
+    fetch('https://project-happy-thoughts-api-t2v5z5lalq-lz.a.run.app/thoughts', options)
       .then((result) => result.json())
       .then(() => fetchThought())
       .catch((error) => console.error(error))
@@ -44,13 +44,13 @@ export const App = () => {
 
   const handleHeartButtonChange = (_id) => {
     const options = {
-      method: 'POST',
+      method: 'PATCH',
       headers: {
         'Content-Type': 'application/json'
       }
     }
 
-    fetch(`https://happy-thoughts-technigo.herokuapp.com/thoughts/${_id}/like`, options)
+    fetch(`https://project-happy-thoughts-api-t2v5z5lalq-lz.a.run.app/thoughts/${_id}/hearts`, options)
       .then((result) => result.json())
       .then(() => fetchThought())
       .catch((error) => console.error(error));
